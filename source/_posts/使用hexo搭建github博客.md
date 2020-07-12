@@ -1,7 +1,7 @@
 ---
 title: 使用hexo搭建github博客
 date: 2020-07-12 12:51:18
-tags:Hexo
+tags: Hexo
 ---
 
 ### 创建github仓库
