@@ -21,7 +21,6 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -63,6 +62,55 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-hexo模板JS库优化，加快网站访问速度" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="article-date">
+  <time datetime="2020-07-15T04:14:58.000Z" itemprop="datePublished">2020-07-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">hexo模板JS库优化，加快网站访问速度</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目前使用的 landscape 模板</p>
+<p>找到<code>themes/landscape/layout/_partial/after-footer.ejs</code>这个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;ajax.googleapis.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>替换为下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;http:&#x2F;&#x2F;apps.bdimg.com&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>找到<code>themes/landscape/layout/_partial/head.ejs</code>这个文件</p>
+<p>将下面代码删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href&#x3D;&quot;http:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family&#x3D;Source+Code+Pro&quot; rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" data-id="ckcmuxm5e0000c4rxbktwavw6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-从github导出备份的hexo源文件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -467,6 +515,10 @@
       <ul>
         
           <li>
+            <a href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">hexo模板JS库优化，加快网站访问速度</a>
+          </li>
+        
+          <li>
             <a href="/2020/07/15/%E4%BB%8Egithub%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD%E7%9A%84hexo%E6%BA%90%E6%96%87%E4%BB%B6/">从github导出备份的hexo源文件</a>
           </li>
         
@@ -480,10 +532,6 @@
         
           <li>
             <a href="/2020/07/12/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2/">使用hexo搭建github博客</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/11/%E5%B0%86Hexo%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E5%88%B0GitHub/">将Hexo源文件备份到GitHub</a>
           </li>
         
       </ul>
@@ -513,7 +561,7 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   

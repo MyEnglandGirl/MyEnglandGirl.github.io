@@ -5,16 +5,19 @@
   
 
   
-  <title>hello,hexo | Hexo</title>
+  <title>hexo模板JS库优化，加快网站访问速度 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="hello,hexo">
-<meta property="og:url" content="http://yoursite.com/2020/07/11/hello-hexo/index.html">
+  <meta name="description" content="目前使用的 landscape 模板 找到themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs这个文件 1&lt;script src&#x3D;&quot;&#x2F;&#x2F;ajax.googleapis.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo模板JS库优化，加快网站访问速度">
+<meta property="og:url" content="http://yoursite.com/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目前使用的 landscape 模板 找到themes&#x2F;landscape&#x2F;layout&#x2F;_partial&#x2F;after-footer.ejs这个文件 1&lt;script src&#x3D;&quot;&#x2F;&#x2F;ajax.googleapis.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&amp;quot">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-11T13:37:23.000Z">
-<meta property="article:modified_time" content="2020-07-15T02:02:20.311Z">
+<meta property="article:published_time" content="2020-07-15T04:14:58.000Z">
+<meta property="article:modified_time" content="2020-07-15T04:20:27.478Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -63,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo模板JS库优化，加快网站访问速度" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/07/11/hello-hexo/" class="article-date">
-  <time datetime="2020-07-11T13:37:23.000Z" itemprop="datePublished">2020-07-11</time>
+    <a href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="article-date">
+  <time datetime="2020-07-15T04:14:58.000Z" itemprop="datePublished">2020-07-15</time>
 </a>
     
   </div>
@@ -77,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hello,hexo
+      hexo模板JS库优化，加快网站访问速度
     </h1>
   
 
@@ -85,28 +88,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>目前使用的 landscape 模板</p>
+<p>找到<code>themes/landscape/layout/_partial/after-footer.ejs</code>这个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;ajax.googleapis.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>替换为下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;http:&#x2F;&#x2F;apps.bdimg.com&#x2F;libs&#x2F;jquery&#x2F;2.0.3&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>找到<code>themes/landscape/layout/_partial/head.ejs</code>这个文件</p>
+<p>将下面代码删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href&#x3D;&quot;http:&#x2F;&#x2F;fonts.googleapis.com&#x2F;css?family&#x3D;Source+Code+Pro&quot; rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/07/11/hello-hexo/" data-id="ckcmq04mn0000ckrx5f5557qq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" data-id="ckcmuxm5e0000c4rxbktwavw6" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/07/11/%E5%B0%86Hexo%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E5%88%B0GitHub/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          将Hexo源文件备份到GitHub
-        
-      </div>
-    </a>
   
+    <a href="/2020/07/15/%E4%BB%8Egithub%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD%E7%9A%84hexo%E6%BA%90%E6%96%87%E4%BB%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">从github导出备份的hexo源文件</div>
+    </a>
   
 </nav>
 
