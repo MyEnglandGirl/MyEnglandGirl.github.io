@@ -8,7 +8,7 @@ tags: Hexo
 
 首先打开github，点击New repository，创建一个新仓库，仓库名必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README
 
-> 例如： [MyEnglandGirl.github.io](https://github.com/MyEnglandGirl/MyEnglandGirl.github.io) 
+例如： [MyEnglandGirl.github.io](https://github.com/MyEnglandGirl/MyEnglandGirl.github.io) 
 
 ### 安装hexo
 

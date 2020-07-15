@@ -18,7 +18,7 @@ git init
 git checkout -b hexo
 ```
 
-> 说明：默认master分支存放的是hexo构建的html文件
+说明：默认master分支存放的是hexo构建的html文件
 
 添加文件列表
 
@@ -40,7 +40,7 @@ git remote add origin git@github.com:myenglandgirl/myenglandgirl.github.io
 
 ```
 git push -u origin hexo
-``` 
+```
 
 ## 之后备份
 
@@ -50,4 +50,3 @@ git commit -m '备份Hexo源文件'
 git push origin hexo
 或git push
 ```
-
