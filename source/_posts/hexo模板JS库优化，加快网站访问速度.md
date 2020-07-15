@@ -15,7 +15,7 @@ tags: Hexo
 替换为下面代码
 
 ```
-<script src="http://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
 ```
 
 找到` themes/landscape/layout/_partial/head.ejs `这个文件
