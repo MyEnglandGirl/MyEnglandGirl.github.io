@@ -7,15 +7,15 @@
   
   <title>从github导出备份的hexo源文件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装node，git，hexo 将备份的hexo分支导出到本地 12git clone url -b 分支名字 folder_namegit clone https:&#x2F;&#x2F;github.com&#x2F;MyEnglandGirl&#x2F;MyEnglandGirl.github.io.git -b hexo blog  在导出的文件夹下面，安装需要的依赖 1npm i  导出">
+  <meta name="description" content="安装node，git，hexo 将备份的hexo分支导出到本地 12git clone url -b 分支名字 folder_namegit clone https:&#x2F;&#x2F;github.com&#x2F;MyEnglandGirl&#x2F;MyEnglandGirl.github.io.git -b hexo blog  在导出的文件夹下面，安装需要的依赖 1npm i  注意">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从github导出备份的hexo源文件">
 <meta property="og:url" content="http://yoursite.com/2020/07/15/%E4%BB%8Egithub%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD%E7%9A%84hexo%E6%BA%90%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装node，git，hexo 将备份的hexo分支导出到本地 12git clone url -b 分支名字 folder_namegit clone https:&#x2F;&#x2F;github.com&#x2F;MyEnglandGirl&#x2F;MyEnglandGirl.github.io.git -b hexo blog  在导出的文件夹下面，安装需要的依赖 1npm i  导出">
+<meta property="og:description" content="安装node，git，hexo 将备份的hexo分支导出到本地 12git clone url -b 分支名字 folder_namegit clone https:&#x2F;&#x2F;github.com&#x2F;MyEnglandGirl&#x2F;MyEnglandGirl.github.io.git -b hexo blog  在导出的文件夹下面，安装需要的依赖 1npm i  注意">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-15T02:05:48.000Z">
-<meta property="article:modified_time" content="2020-07-15T02:17:19.692Z">
+<meta property="article:modified_time" content="2020-07-15T02:26:46.920Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -96,18 +96,24 @@
 <p>在导出的文件夹下面，安装需要的依赖</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
-<p>导出的步骤就已经完成了，我们可以测试一下</p>
+<p>注意：</p>
+<p>默认首次安装git，需要初始化邮箱和用户名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
+
+<p>hexo首次部署需要生成公钥和私钥</p>
+<p>使用ssh-keygen生成私钥和公钥 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>登录Github，点击头像下的settings，在左侧店家<code>SSH and GPG keys</code></p>
+<p>添加ssh,新建一个new ssh key，将id_rsa.pub文件里的内容复制上去。</p>
+<p>测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
 <p>新建一篇文章</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new 备份测试</span><br></pre></td></tr></table></figure>
 
 <p>生成部署并备份到github（之前的文章已经说过重写了打包命令，需要自己修改）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-
-<p>注意：</p>
-<p>默认首次安装git，需要初始化邮箱和用户名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">git config --global user.name &quot;Your Name&quot;</span><br></pre></td></tr></table></figure>
-
-
 
 
 
