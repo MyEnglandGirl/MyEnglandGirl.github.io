@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>使用hexo搭建github博客 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="创建github仓库首先打开github，点击New repository，创建一个新仓库，仓库名必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README 例如： MyEnglandGirl.github.io  安装hexo自行检查是否安装node和git 全局安装hexo 1npm inst">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建github博客">
+<meta property="og:url" content="http://yoursite.com/2020/07/12/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建github仓库首先打开github，点击New repository，创建一个新仓库，仓库名必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README 例如： MyEnglandGirl.github.io  安装hexo自行检查是否安装node和git 全局安装hexo 1npm inst">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-12T04:51:18.000Z">
+<meta property="article:modified_time" content="2022-09-06T14:23:08.318Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用hexo搭建github博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/12/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-07-12T04:51:18.000Z" itemprop="datePublished">2020-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用hexo搭建github博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h3><p>首先打开github，点击New repository，创建一个新仓库，仓库名必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README</p>
+<p>例如： <a href="https://github.com/MyEnglandGirl/MyEnglandGirl.github.io" target="_blank" rel="noopener">MyEnglandGirl.github.io</a> </p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>自行检查是否安装node和git</p>
+<p>全局安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+
+<p>检查hexo是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>创建一个文件夹，在文件夹根目录下初始化文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>安装需要的组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure>
+
+<p>执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g #generate 生成静态文件</span><br><span class="line">$ hexo s #server 启动服务器。默认情况下，访问网址为： [http:&#x2F;&#x2F;localhost:4000&#x2F;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="链接hexo和git"><a href="#链接hexo和git" class="headerlink" title="链接hexo和git"></a>链接hexo和git</h3><p> 设置你的用户名称与邮件地址，如果是第一次使用git的话 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;name&quot;</span><br><span class="line">$ git config --global user.email name@example.com</span><br></pre></td></tr></table></figure>
+
+<p> 使用ssh-keygen生成私钥和公钥 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p> 登录Github，点击头像下的settings，添加ssh,新建一个new ssh key，将id_rsa.pub文件里的内容复制上去。 </p>
+<p>测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p> 配置Deployment，在hexo初始化的文件夹中，找到_config.yml文件，修改repo值（在末尾），repo值是github项目里的ssh。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repository: git@github.com:MyEnglandGirl&#x2F;MyEnglandGirl.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：冒号后面有个空格</p>
+</blockquote>
+<p>修改配置文件 _config.yml文件后 ，需要重新部署一下，否则不生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>如果还不生效，需要clean一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>使用工具将hexo博客部署到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>创建文章(使用默认模板，可以根据需要自行修改)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;  #新建文章</span><br><span class="line">&lt;!--例如--&gt;</span><br><span class="line"># [layout] : 模板名，可省略，也可自定义模板</span><br><span class="line">$ hexo new  hello</span><br></pre></td></tr></table></figure>
+
+<p>使用编辑器编辑好文章，接着就可以上传到github上，可以通过设置的域名进行访问</p>
+<p>默认文章目录在<code>‘/source/_posts’</code>下</p>
+<p>部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p> 生成以及部署了。在打开你的博客主页就可以看到你创建的文章了。 </p>
+<p><a href="https://github.com/MyEnglandGirl/MyEnglandGirl.github.io" target="_blank" rel="noopener">MyEnglandGirl.github.io</a> </p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g #generate 生成静态文件</span><br><span class="line">hexo s #server 启动服务器。在本地预览效果，默认情况下，访问网址为： http:&#x2F;&#x2F;localhost:4000&#x2F;</span><br><span class="line">hexo d #deploy 部署网站同步到github。部署网站前，需要预先生成静态文件</span><br><span class="line">hexo clean #clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hexo文件目录结构"><a href="#Hexo文件目录结构" class="headerlink" title="Hexo文件目录结构"></a>Hexo文件目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── .deploy          #部署文件夹</span><br><span class="line">├── public           #html源码，hexo g生成</span><br><span class="line">├── scaffolds        #模板</span><br><span class="line">├── scripts          #扩展脚本</span><br><span class="line">├── source           #文章源码</span><br><span class="line">|   ├── _drafts      #草稿</span><br><span class="line">|   └── _posts       #文章</span><br><span class="line">├── themes           #主题</span><br><span class="line">|   ├── next         #NexT主题</span><br><span class="line">├── _config.yml      #博客配置</span><br><span class="line">└── package.json     #应用程序数据</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/12/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2/" data-id="cl7qagi1g0005acrldompcu9e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/07/12/%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E9%83%A8%E7%BD%B2%E5%B9%B6%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          一键生成部署并备份Hexo源文件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/11/%E5%B0%86Hexo%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD%E5%88%B0GitHub/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">将Hexo源文件备份到GitHub</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/git/" style="font-size: 10px;">git</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/06/git%20clone%E6%97%B6%E5%87%BA%E7%8E%B0Permission%20denied/">denied</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/06/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">hexo模板JS库优化，加快网站访问速度</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/%E4%BB%8Egithub%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD%E7%9A%84hexo%E6%BA%90%E6%96%87%E4%BB%B6/">从github导出备份的hexo源文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/12/%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E9%83%A8%E7%BD%B2%E5%B9%B6%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">一键生成部署并备份Hexo源文件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>denied | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="问题描述 git clone时出现Permission denied (publickey)  解决方案 启动Git Bash   右键，在弹出的快捷菜单中，选择 git bash here：   检查是否生成SSH KEY 1234# 切换到.ssh目录&gt; cd ~&#x2F;.ssh# 查看当前目录下所有文件&gt; ls  检查.ssh目录下是否有 xxx_rsa.pub 文件 ，没有需要生成，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="denied">
+<meta property="og:url" content="http://yoursite.com/2022/09/06/git%20clone%E6%97%B6%E5%87%BA%E7%8E%B0Permission%20denied/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="问题描述 git clone时出现Permission denied (publickey)  解决方案 启动Git Bash   右键，在弹出的快捷菜单中，选择 git bash here：   检查是否生成SSH KEY 1234# 切换到.ssh目录&gt; cd ~&#x2F;.ssh# 查看当前目录下所有文件&gt; ls  检查.ssh目录下是否有 xxx_rsa.pub 文件 ，没有需要生成，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-06T14:35:20.000Z">
+<meta property="article:modified_time" content="2022-09-06T14:47:48.277Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="git-git clone时出现Permission denied" class="article article-type-git" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/09/06/git%20clone%E6%97%B6%E5%87%BA%E7%8E%B0Permission%20denied/" class="article-date">
+  <time datetime="2022-09-06T14:35:20.000Z" itemprop="datePublished">2022-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      denied
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p> git clone时出现Permission denied (publickey) </p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li><p>启动Git Bash </p>
+<p> 右键，在弹出的快捷菜单中，选择 <strong>git bash here</strong>： </p>
+</li>
+<li><p>检查是否生成SSH KEY</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到.ssh目录</span></span><br><span class="line">&gt; <span class="built_in">cd</span> ~/.ssh</span><br><span class="line"><span class="comment"># 查看当前目录下所有文件</span></span><br><span class="line">&gt; ls</span><br></pre></td></tr></table></figure>
+
+<p>检查.ssh目录下是否有 <strong>xxx_rsa.pub</strong> 文件 ，没有需要生成，有直接跳转到第五步。</p>
+</li>
+<li><p>生成SSH KEY</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>按照提示输入文件名称和密码</p>
+</li>
+<li><p>添加SSH KEY 到SSH-AGENT</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~&#x2F;.ssh&#x2F;id_rsa</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加SSH KEY到GitHub</p>
+<p>点击右上角用户头像 –&gt; Settings 菜单项 –&gt; SSH and GPG keys 菜单项 –&gt; New SSH key 按钮</p>
+<p>使用less命令打开id_rsa.pub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>复制文件内容，粘贴到github内，title随便填。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2022/09/06/git%20clone%E6%97%B6%E5%87%BA%E7%8E%B0Permission%20denied/" data-id="cl7qb43y500009crl5cjc6a9m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/git/" style="font-size: 10px;">git</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/06/git%20clone%E6%97%B6%E5%87%BA%E7%8E%B0Permission%20denied/">denied</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/06/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/hexo%E6%A8%A1%E6%9D%BFJS%E5%BA%93%E4%BC%98%E5%8C%96%EF%BC%8C%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">hexo模板JS库优化，加快网站访问速度</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/15/%E4%BB%8Egithub%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD%E7%9A%84hexo%E6%BA%90%E6%96%87%E4%BB%B6/">从github导出备份的hexo源文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/12/%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E9%83%A8%E7%BD%B2%E5%B9%B6%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">一键生成部署并备份Hexo源文件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="https://apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
